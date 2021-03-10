@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "bootstrap": "^5.0.0-beta2",
     "dashify": "^2.0.0",
     "firebase-admin": "^9.5.0",
     "install": "^0.13.0",

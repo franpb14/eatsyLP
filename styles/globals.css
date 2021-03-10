@@ -1,16 +1,56 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.header{
+  position:relative;
+  padding-bottom: 10px;
+  background-color: #75cfb8;
+}
+.container{
+}
+.imgheader{
+  position: relative;
+  width: 200px !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.comida{
+  width: 100%;
 }
-
-* {
-  box-sizing: border-box;
+.titleblock{
+  font-family: Brush Script MT;
+  font-size: 3rem;
+  text-align: center;
+}
+.bodyblock{
+  
+  text-align: justify;
+  font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.3rem;
+  color: gray;
+}
+#bodyblock1{
+  padding-top: 4.5%;
+}
+.bloqueverde{
+  position: relative;
+  width: 100% !important;
+  padding-bottom: 100px;
+  background-color: #bbdfc8;
+}
+.bloquemarron{
+  position: relative;
+  width:  100%  !important;
+  padding-bottom: 100px;
+  background-color: #f0e5d8;
+}
+.btn-primary{
+  width: 200px !important;
+  margin-top: 20px !important;
+  transition: all 0.5s !important;
+  background-color: #ffc478 !important;
+  border-color: #ffc478 !important;
+}
+#thanks{
+  width: 400px;
+}
+.btn-primary:hover{
+  background-color: #75cfb8 !important;
+  border-color: #75cfb8 !important;
 }
