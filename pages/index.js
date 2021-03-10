@@ -4,6 +4,7 @@ import axios from 'axios';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.css'
+import Fade from 'react-reveal/Fade';
 
 const Post = () => {
   const [content, setContent] = useState({
@@ -18,7 +19,6 @@ const Post = () => {
     await axios.post('/api/entry', { correo, slug: dashify(correo) });
     alert("¡Gracias! Te iremos informando.")
   }
-  
   return (
     <>
     <Head>
@@ -26,6 +26,7 @@ const Post = () => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="shortcut icon" href="logo.png" />
     </Head>
+    
     <div className="container-fluid">
       <div className="header row justify-content-center">
             <img className="imgheader" src="/logoheader.png"></img>
@@ -33,7 +34,8 @@ const Post = () => {
     </div>
         
     <div className="bloques">
-      <div className="bloquemarron">  
+    <Fade left cascade>
+      <div id="bloque1" className="bloquemarron">  
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -51,9 +53,9 @@ const Post = () => {
           </div>
         </div>
       </div>
-      
-      
-      <div className="bloqueverde">
+      </Fade>
+      <Fade right>
+      <div id="bloque2" className="bloqueverde">
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -72,8 +74,9 @@ const Post = () => {
           </div>
         </div>    
       </div>
-
-      <div className="bloquemarron">  
+      </Fade>
+      <Fade left>
+      <div id="bloque3" className="bloquemarron">  
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -94,8 +97,9 @@ const Post = () => {
           </div>
         </div>
       </div>
-
-      <div className="bloqueverde">
+    </Fade>
+    <Fade right >
+      <div id="bloque4" className="bloqueverde">
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -128,8 +132,9 @@ const Post = () => {
           </div>
         </div>    
       </div>
-
-      <div className="bloquemarron">
+    </Fade>
+    <Fade left>
+      <div id="bloque5" className="bloquemarron">
       <div className="container">
           <div className="titleblock col-12">
             <label htmlFor="correo">¿Quieres que te mantengamos informado?</label>
@@ -156,7 +161,11 @@ const Post = () => {
           
         </div>  
       
+      
+      
       </div>
+      
+      </Fade>
     </div>
     
     
