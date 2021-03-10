@@ -18,11 +18,13 @@ const Post = () => {
     await axios.post('/api/entry', { correo, slug: dashify(correo) });
     alert("¡Gracias! Te iremos informando.")
   }
+  
   return (
     <>
     <Head>
-      <title>Eatsy</title>
+      <title >Eatsy</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="shortcut icon" href="logo.png" />
     </Head>
     <div className="container-fluid">
       <div className="header row justify-content-center">
@@ -141,7 +143,7 @@ const Post = () => {
                   type="email"
                   aria-describedby="emailHelp"
                   placeholder="Escribe tu correo"
-                  class="form-control"
+                  className="form-control"
                   name="correo"
                   value={content.correo}
                   onChange={onChange}
