@@ -34,7 +34,7 @@ const Post = () => {
     </div>
         
     <div className="bloques">
-    <Fade left cascade>
+    <Fade left>
       <div id="bloque1" className="bloquemarron">  
         <div className="container">
           <div className="row justify-content-center">
