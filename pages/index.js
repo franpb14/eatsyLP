@@ -169,7 +169,7 @@ const Post = () => {
       
       </Fade>
 
-      <Fade left>
+      <Fade right>
     <div id="bloque5" className="bloqueverde">  
         <div className="container">
           <div className="row justify-content-center">
@@ -216,7 +216,7 @@ const Post = () => {
         </div>
       </div>
     </Fade>
-    <Fade right>
+    <Fade left>
     <div id="bloque5" className="bloquemarron">  
         <div className="container">
           <div className="row justify-content-center">
@@ -262,7 +262,7 @@ const Post = () => {
       </div>
     </Fade>
   
-    <Fade left>
+    <Fade right>
     <div id="bloque5" className="bloqueverde">  
         <div className="container">
           <div className="row justify-content-center">
