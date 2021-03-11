@@ -181,31 +181,31 @@ const Post = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Fernando Luis Sola Espinosa</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Fernando Luis Sola Espinosa</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Reyes Blasco Cuadrado</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Reyes Blasco Cuadrado</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraMaria.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">María Marín Serrano</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraMaria.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">María Marín Serrano</h4>
                   
                 </div>
             
@@ -226,31 +226,31 @@ const Post = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-wrong">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Francisco José Perejón Barrios</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-wrong">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Francisco José Perejón Barrios</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-wrong">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Vanessa Pradas Fernández</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-wrong">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Vanessa Pradas Fernández</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-wrong">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Fernando Romero Rioja</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-wrong">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Fernando Romero Rioja</h4>
                   
                 </div>
             
@@ -271,61 +271,61 @@ const Post = () => {
             </div>
           </div>
           <div className="row justify-content-center">
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Pablo Cardenal Gamito</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Pablo Cardenal Gamito</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Jose María Cornac Fisas</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Jose María Cornac Fisas</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Javier García Cerrada</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Javier García Cerrada</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraJuanfer.jpg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Juan Fernández Fernández</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraJuanfer.jpg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Juan Fernández Fernández</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Estefanía Ganfornina Triguero</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Estefanía Ganfornina Triguero</h4>
                   
                 </div>
             
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="card text-center border-success">
-                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
-                <div class="card-body">
-                  <h4 class="card-title">Sergio Sánchez León</h4>
+          <div className="col-md-6 col-lg-3">
+            <div className="card text-center border-success">
+                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div className="card-body">
+                  <h4 className="card-title">Sergio Sánchez León</h4>
                   
                 </div>
             
