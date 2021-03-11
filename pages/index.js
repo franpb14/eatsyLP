@@ -22,6 +22,7 @@ const Post = () => {
     <>
     <Head>
       <title >Eatsy</title>
+      <meta name="description" content="Landing page de una futura web destinada a personas con restricciones alimentarias."></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="shortcut icon" href="logo.png" />
     </Head>
