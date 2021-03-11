@@ -2,7 +2,6 @@ import { useState } from 'react';
 import dashify from 'dashify';
 import axios from 'axios';
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import Fade from 'react-reveal/Fade';
 
@@ -43,10 +42,10 @@ const Post = () => {
             </div> 
           </div>
           <div className="row justify-content-center">
-          <div className="col-sm-3 col-6">
+          <div className="col-lg-3 col-6">
               <img className="comida" src="comida.png"></img>
             </div> 
-            <div id="bodyblock1" className="bodyblock col-sm-5">
+            <div id="bodyblock1" className="bodyblock col-md-5">
               Eatsy es un punto de encuentro para personas con necesidades alimenticias especiales donde puedan compartir productos, 
               dónde adquirirlos y su experiencia para hacer su vida más deliciosa.
             </div> 
@@ -64,11 +63,11 @@ const Post = () => {
           </div>
           <div className="row justify-content-center">
           
-            <div id="bodyblock1" className="bodyblock col-sm-5">
+            <div id="bodyblock1" className="bodyblock col-md-5">
               Nace como un proyecto estudiantil para la Universidad de Sevilla y 
               tras un estudio exhaustivo del mercado creemos que dichas personas no tienen recursos suficientes para encontrar buenos productos.
             </div> 
-            <div className="col-sm-3 col-6">
+            <div className="col-lg-3 col-6">
               <img className="comida" src="comiendo.png"></img>
             </div> 
           </div>
@@ -84,10 +83,10 @@ const Post = () => {
             </div> 
           </div>
           <div className="row justify-content-center">
-          <div className="col-sm-3 col-5">
+          <div className="col-lg-3 col-5">
               <img className="comida" src="tenedor.png"></img>
             </div> 
-            <div id="bodyblock1" className="bodyblock col-sm-5">
+            <div id="bodyblock1" className="bodyblock col-md-5">
               Los usuarios podrán filtrar productos que cumplan ciertas restricciones alimenticias (como el glúten) o sigan
               algunas dietas (como el vegetarianismo), de esos elementos se podrá saber la opinión de los usuarios sobre el mismo
               y donde encontrarlo, así como una descripción más detallada. <br></br>Además, podrán añadir ellos mismos productos que serán aprobados
@@ -108,7 +107,7 @@ const Post = () => {
           </div>
           <div className="row justify-content-center">
           
-            <div id="bodyblock1" className="bodyblock col-sm-5">
+            <div id="bodyblock1" className="bodyblock col-md-5">
              Podemos distinguir 3 fases:<br></br>
              <ul>
                <li>
@@ -126,13 +125,14 @@ const Post = () => {
                </li>
              </ul>
              </div> 
-            <div className="col-sm-3 col-6">
+            <div className="col-lg-3 col-6">
               <img className="comida" src="familia.png"></img>
             </div> 
           </div>
         </div>    
       </div>
     </Fade>
+
     <Fade left>
       <div id="bloque5" className="bloquemarron">
       <div className="container">
@@ -140,10 +140,12 @@ const Post = () => {
             <label htmlFor="correo">¿Quieres que te mantengamos informado?</label>
           </div>
           <div className="row justify-content-center">
-               Te enviaremos correos con el estado de la aplicación
+            <div id="textocorreo" className="col-12">
+              Te enviaremos correos con el estado de la aplicación
+            </div>
           </div>
           <div className="row justify-content-center">
-              <div className="col-sm-3 col-8">
+              <div className="col-md-3 col-8">
                 <input
                   type="email"
                   aria-describedby="emailHelp"
@@ -166,6 +168,174 @@ const Post = () => {
       </div>
       
       </Fade>
+
+      <Fade left>
+    <div id="bloque5" className="bloqueverde">  
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="titleblock col-12">
+              Quiénes somos
+            </div> 
+            <div  className="col-12 titleblock text-center">
+              Jefe de proyecto y coordinadoras
+            </div>
+          </div>
+          <div className="row justify-content-center">
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Fernando Luis Sola Espinosa</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Reyes Blasco Cuadrado</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraMaria.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">María Marín Serrano</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </Fade>
+    <Fade right>
+    <div id="bloque5" className="bloquemarron">  
+        <div className="container">
+          <div className="row justify-content-center">
+            
+            <div  className="col-12 titleblock text-center">
+              FrontEnd
+            </div>
+          </div>
+          <div className="row justify-content-center">
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-wrong">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Francisco José Perejón Barrios</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-wrong">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Vanessa Pradas Fernández</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-wrong">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Fernando Romero Rioja</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </Fade>
+  
+    <Fade left>
+    <div id="bloque5" className="bloqueverde">  
+        <div className="container">
+          <div className="row justify-content-center">
+            <div  className="col-12 titleblock text-center">
+              BackEnd
+            </div>
+          </div>
+          <div className="row justify-content-center">
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Pablo Cardenal Gamito</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Jose María Cornac Fisas</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Javier García Cerrada</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraJuanfer.jpg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Juan Fernández Fernández</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Estefanía Ganfornina Triguero</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card text-center border-success">
+                <img class="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <div class="card-body">
+                  <h4 class="card-title">Sergio Sánchez León</h4>
+                  
+                </div>
+            
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </Fade>
     </div>
     
     

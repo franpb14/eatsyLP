@@ -12,6 +12,19 @@
 .comida{
   width: 100%;
 }
+.border-success{
+  padding-top: 25px;
+  background-color: #bbdfc8 !important;
+  border: 0px !important;
+}
+.border-wrong{
+  padding-top: 25px;
+  background-color: #f0e5d8 !important;
+  border: 0px !important;
+}
+.card-img-top {
+  width:200px !important;
+}
 .titleblock{
   font-family: Brush Script MT, fantasy;
   font-size: 3rem;
@@ -54,4 +67,7 @@
 .btn-primary:hover{
   background-color: #75cfb8 !important;
   border-color: #75cfb8 !important;
+}
+#textocorreo{
+  text-align: center;
 }
