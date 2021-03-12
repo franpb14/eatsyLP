@@ -8,15 +8,25 @@ import Fade from 'react-reveal/Fade';
 const Post = () => {
   const [content, setContent] = useState({
     correo: undefined,
+    duda:undefined,
   })
   const onChange = (e) => {
     const { value, name } = e.target;
     setContent(prevState => ({ ...prevState, [name]: value }));
   }
+  const onChange2 = (e) => {
+    const { value, name } = e.target;
+    setContent(prevState => ({ ...prevState, [name]: value }));
+  }
   const onSubmit = async () => {
     const { correo } = content;
-    await axios.post('/api/entry', { correo, slug: dashify(correo) });
-    alert("¡Gracias! Te iremos informando.")
+    await axios.post('/api/entry', { correo, slug: dashify(correo)});
+    alert("¡Gracias! Te iremos informando vía correo. En el momento que quieras desuscribirte simplemente responde a uno diciéndolo.")
+  }
+  const onSubmit2 = async () => {
+    const { nombre, correo, duda } = content;
+    await axios.post('/api/duda', { nombre, slug: dashify(nombre), correo, duda });
+    alert("¡Gracias! Es posible que te contestemos en forma de correo.")
   }
   return (
     <>
@@ -34,8 +44,9 @@ const Post = () => {
     </div>
         
     <div className="bloques">
-    <Fade left>
       <div id="bloque1" className="bloquemarron">  
+      
+      <Fade left>
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -52,10 +63,12 @@ const Post = () => {
             </div> 
           </div>
         </div>
-      </div>
+        
       </Fade>
-      <Fade right>
+      </div>
       <div id="bloque2" className="bloqueverde">
+        
+      <Fade right>
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -73,10 +86,10 @@ const Post = () => {
             </div> 
           </div>
         </div>    
-      </div>
       </Fade>
-      <Fade left>
-      <div id="bloque3" className="bloquemarron">  
+      </div>
+      <div id="bloque3" className="bloquemarron"> 
+      <Fade left> 
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -96,10 +109,10 @@ const Post = () => {
             </div> 
           </div>
         </div>
-      </div>
     </Fade>
-    <Fade right >
+      </div>
       <div id="bloque4" className="bloqueverde">
+    <Fade right >
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -131,11 +144,11 @@ const Post = () => {
             </div> 
           </div>
         </div>    
-      </div>
     </Fade>
+      </div>
 
-    <Fade left>
       <div id="bloque5" className="bloquemarron">
+    <Fade left>
       <div className="container">
           <div className="titleblock col-12">
             <label htmlFor="correo">¿Quieres que te mantengamos informado?</label>
@@ -163,15 +176,12 @@ const Post = () => {
           </div>
           
         </div>  
-      
-      
-      
+        </Fade>
       </div>
       
-      </Fade>
 
-      <Fade right>
     <div id="bloque5" className="bloqueverde">  
+      <Fade right>
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -215,10 +225,10 @@ const Post = () => {
 
           </div>
         </div>
-      </div>
     </Fade>
-    <Fade left>
-    <div id="bloque5" className="bloquemarron">  
+      </div>
+    <div id="bloque5" className="bloquemarron"> 
+    <Fade left> 
         <div className="container">
           <div className="row justify-content-center">
             
@@ -260,11 +270,11 @@ const Post = () => {
 
           </div>
         </div>
-      </div>
     </Fade>
+      </div>
   
-    <Fade right>
-    <div id="bloque5" className="bloqueverde">  
+    <div id="bloque5" className="bloqueverde"> 
+    <Fade right> 
         <div className="container">
           <div className="row justify-content-center">
             <div  className="col-12 titleblock text-center">
@@ -335,8 +345,51 @@ const Post = () => {
 
           </div>
         </div>
-      </div>
     </Fade>
+      </div>
+
+      <div id="bloque5" className="bloquemarron">
+    <Fade left>
+      <div className="container">
+          <div className="titleblock col-12">
+            <label htmlFor="correo">Dudas o Sugerencias</label>
+          </div>
+          <div className="row justify-content-center">
+              <div className="col-md-5 col-8">
+                Nombre:
+                <input
+                  type="text"
+                  className="form-control"
+                  name="nombre"
+                  value={content.nombre}
+                  onChange={onChange2}
+                />
+                Correo:
+                <input
+                  type="email"
+                  aria-describedby="emailHelp"
+                  className="form-control"
+                  name="correo"
+                  value={content.correo}
+                  onChange={onChange2}
+                />
+                Duda o sugerencia:
+                <textarea
+                  class="form-control"
+                  name="duda"
+                  value={content.duda}
+                  onChange={onChange2}
+                />
+              </div>
+          </div>
+          <div className="row justify-content-center">
+            <button className="btn btn-primary" onClick={onSubmit2} >Enviar</button>
+          </div>
+          
+        </div>  
+        </Fade>
+      </div>
+
     </div>
     
     
