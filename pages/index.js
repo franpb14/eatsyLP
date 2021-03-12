@@ -4,6 +4,7 @@ import axios from 'axios';
 import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.css'
 import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 
 const Post = () => {
   const [content, setContent] = useState({
@@ -68,7 +69,7 @@ const Post = () => {
       </div>
       <div id="bloque2" className="bloqueverde">
         
-      <Fade right>
+      <Flip right>
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -86,10 +87,10 @@ const Post = () => {
             </div> 
           </div>
         </div>    
-      </Fade>
+      </Flip>
       </div>
       <div id="bloque3" className="bloquemarron"> 
-      <Fade left> 
+      <Fade bottom> 
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -111,6 +112,7 @@ const Post = () => {
         </div>
     </Fade>
       </div>
+
       <div id="bloque4" className="bloqueverde">
     <Fade right >
       <div className="container">
@@ -148,7 +150,7 @@ const Post = () => {
       </div>
 
       <div id="bloque5" className="bloquemarron">
-    <Fade left>
+    <Flip top>
       <div className="container">
           <div className="titleblock col-12">
             <label htmlFor="correo">¿Quieres que te mantengamos informado?</label>
@@ -176,12 +178,12 @@ const Post = () => {
           </div>
           
         </div>  
-        </Fade>
+        </Flip>
       </div>
       
 
     <div id="bloque6" className="bloqueverde">  
-      <Fade right>
+      <Fade top>
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
@@ -349,7 +351,7 @@ const Post = () => {
       </div>
 
       <div id="bloque9" className="bloquemarron">
-    <Fade left>
+    <Flip bottom>
       <div className="container">
           <div className="titleblock col-12">
             <label htmlFor="correo">Dudas o Sugerencias</label>
@@ -387,7 +389,7 @@ const Post = () => {
           </div>
           
         </div>  
-        </Fade>
+        </Flip>
       </div>
 
     </div>
