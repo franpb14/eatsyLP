@@ -25,13 +25,10 @@
 .card-img-top {
   width:200px !important;
 }
-@font-face {
-  font-family: FontBrush;
-  src: url(/Brush.woff);
-}
+
 
 .titleblock{
-  font-family: FontBrush, Brush Script MT, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Brush Script MT, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 3rem;
   text-align: center;
 }
