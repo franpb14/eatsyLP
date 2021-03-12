@@ -180,7 +180,7 @@ const Post = () => {
       </div>
       
 
-    <div id="bloque5" className="bloqueverde">  
+    <div id="bloque6" className="bloqueverde">  
       <Fade right>
         <div className="container">
           <div className="row justify-content-center">
@@ -227,7 +227,7 @@ const Post = () => {
         </div>
     </Fade>
       </div>
-    <div id="bloque5" className="bloquemarron"> 
+    <div id="bloque7" className="bloquemarron"> 
     <Fade left> 
         <div className="container">
           <div className="row justify-content-center">
@@ -273,7 +273,7 @@ const Post = () => {
     </Fade>
       </div>
   
-    <div id="bloque5" className="bloqueverde"> 
+    <div id="bloque8" className="bloqueverde"> 
     <Fade right> 
         <div className="container">
           <div className="row justify-content-center">
@@ -348,7 +348,7 @@ const Post = () => {
     </Fade>
       </div>
 
-      <div id="bloque5" className="bloquemarron">
+      <div id="bloque9" className="bloquemarron">
     <Fade left>
       <div className="container">
           <div className="titleblock col-12">
