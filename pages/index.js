@@ -375,7 +375,7 @@ const Post = () => {
                 />
                 Duda o sugerencia:
                 <textarea
-                  class="form-control"
+                  className="form-control"
                   name="duda"
                   value={content.duda}
                   onChange={onChange2}
