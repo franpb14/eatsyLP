@@ -59,7 +59,7 @@ const Post = () => {
               <img className="comida" src="comida.png"></img>
             </div> 
             <div id="bodyblock1" className="bodyblock col-md-5">
-              Eatsy es un punto de encuentro para personas con necesidades alimenticias especiales donde puedan compartir productos, 
+              Eatsy es un punto de encuentro para personas con necesidades alimenticias especiales dónde puedan compartir productos, 
               dónde adquirirlos y su experiencia para hacer su vida más deliciosa.
             </div> 
           </div>
