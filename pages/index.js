@@ -127,17 +127,17 @@ const Post = () => {
              Podemos distinguir 3 fases:<br></br>
              <ul>
                <li>
-                 <strong>Primera fase:</strong> tendremos todo lo importante relacionado con los productos. 29/03/2021.
+                 <strong>Primera fase:</strong> tendremos todo lo importante relacionado con los productos. 05/04/2021.
                </li>
              </ul>
              <ul>
                <li>
-                 <strong>Segunda fase:</strong> la aplicación estará terminada en cuanto a funcionalidad. 12/04/2021.
+                 <strong>Segunda fase:</strong> la aplicación estará terminada en cuanto a funcionalidad. 27/04/2021.
                </li>
              </ul>
              <ul>
                <li>
-                 <strong>Tercera fase:</strong> se arreglarán fallos y se harán posibles mejoras como el de implementar recetas con productos relacionados. 26/04/2021.
+                 <strong>Tercera fase:</strong> se arreglarán fallos y se harán posibles mejoras como el de implementar recetas con productos relacionados. 11/05/2021.
                </li>
              </ul>
              </div> 
