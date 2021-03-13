@@ -183,7 +183,7 @@ const Post = () => {
       
 
     <div id="bloque6" className="bloqueverde">  
-      <Fade top>
+      <Fade bottom>
         <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
