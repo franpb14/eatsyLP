@@ -73,7 +73,7 @@ const Post = () => {
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
-              ¿De donde nace la idea?
+              ¿De dónde nace la idea?
             </div> 
           </div>
           <div className="row justify-content-center">
@@ -196,7 +196,7 @@ const Post = () => {
           <div className="row justify-content-center">
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaFers.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Fernando Luis Sola Espinosa</h4>
                   
@@ -206,7 +206,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaReyes.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Reyes Blasco Cuadrado</h4>
                   
@@ -216,7 +216,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraMaria.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">María Marín Serrano</h4>
                   
@@ -241,7 +241,7 @@ const Post = () => {
           <div className="row justify-content-center">
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-wrong">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaFran.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Francisco José Perejón Barrios</h4>
                   
@@ -251,7 +251,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-wrong">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaVane.png"/>            
                 <div className="card-body">
                   <h4 className="card-title">Vanessa Pradas Fernández</h4>
                   
@@ -261,7 +261,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-wrong">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaFer.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Fernando Romero Rioja</h4>
                   
@@ -286,7 +286,7 @@ const Post = () => {
           <div className="row justify-content-center">
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaPablo.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Pablo Cardenal Gamito</h4>
                   
@@ -296,7 +296,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaJose.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Jose María Cornac Fisas</h4>
                   
@@ -306,7 +306,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Javier García Cerrada</h4>
                   
@@ -316,7 +316,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraJuanfer.jpg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaJuanfer.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Juan Fernández Fernández</h4>
                   
@@ -326,7 +326,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Estefanía Ganfornina Triguero</h4>
                   
@@ -336,7 +336,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/negraFran.jpeg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Sergio Sánchez León</h4>
                   
