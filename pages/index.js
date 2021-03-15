@@ -216,7 +216,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaMaria.jpeg"/>            
                 <div className="card-body">
                   <h4 className="card-title">María Marín Serrano</h4>
                   
@@ -326,7 +326,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaEstefania.jpeg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Estefanía Ganfornina Triguero</h4>
                   
@@ -336,7 +336,7 @@ const Post = () => {
           </div>
           <div className="col-md-6 col-lg-3">
             <div className="card text-center border-success">
-                <img className="card-img-top mx-auto d-block rounded" src="/blancaJavi.jpg"/>            
+                <img className="card-img-top mx-auto d-block rounded" src="/blancaSergio.jpeg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Sergio Sánchez León</h4>
                   
