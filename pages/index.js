@@ -339,7 +339,6 @@ const Post = () => {
                 <img className="card-img-top mx-auto d-block rounded" src="/blancaSergio.jpeg"/>            
                 <div className="card-body">
                   <h4 className="card-title">Sergio Sánchez León</h4>
-                  
                 </div>
             
             </div>
