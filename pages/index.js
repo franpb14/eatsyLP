@@ -181,8 +181,30 @@ const Post = () => {
         </Flip>
       </div>
       
+      <div id="bloque2" className="bloqueverde">
+        
+      <Flip right>
+      <div className="container">
+          <div className="row justify-content-center">
+            <div className="titleblock col-12">
+              ¿Quieres probar una demo?
+            </div> 
+          </div>
+          <div className="row justify-content-center">
+          <div className="col-lg-3 col-6">
+              <a  href="https://eatsy-develop.herokuapp.com"> <img className="comida" src="tortita.png"></img></a>
+            </div> 
+            <div id="bodyblock1" className="bodyblock col-md-5">
+            En <a className="link" href="https://eatsy-develop.herokuapp.com">este link</a> podrás probar lo último que hemos hecho. Sientete 
+            libre para probarlo todo y si tienes alguna duda o sugerencia puedes ponerla debajo de esta misma página. </div> 
+            
+          </div>
+        </div>    
+      </Flip>
+      </div>
 
-    <div id="bloque6" className="bloqueverde">  
+
+    <div id="bloque6" className="bloquemarron">  
       <Fade bottom>
         <div className="container">
           <div className="row justify-content-center">
@@ -229,7 +251,7 @@ const Post = () => {
         </div>
     </Fade>
       </div>
-    <div id="bloque7" className="bloquemarron"> 
+    <div id="bloque7" className="bloqueverde"> 
     <Fade left> 
         <div className="container">
           <div className="row justify-content-center">
@@ -275,7 +297,7 @@ const Post = () => {
     </Fade>
       </div>
   
-    <div id="bloque8" className="bloqueverde"> 
+    <div id="bloque8" className="bloquemarron"> 
     <Fade right> 
         <div className="container">
           <div className="row justify-content-center">
@@ -349,7 +371,7 @@ const Post = () => {
     </Fade>
       </div>
 
-      <div id="bloque9" className="bloquemarron">
+      <div id="bloque9" className="bloqueverde">
     <Flip bottom>
       <div className="container">
           <div className="titleblock col-12">

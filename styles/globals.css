@@ -12,14 +12,21 @@
 .comida{
   width: 100%;
 }
+.link{
+  color:#ffa631;
+  transition: all 1s;
+}
+.link:hover{
+  color: #75cfb8;
+}
 .border-success{
   padding-top: 25px;
-  background-color: #bbdfc8 !important;
+  background-color: #f0e5d8 !important;
   border: 0px !important;
 }
 .border-wrong{
   padding-top: 25px;
-  background-color: #f0e5d8 !important;
+  background-color: #bbdfc8 !important;
   border: 0px !important;
 }
 .card-img-top {
