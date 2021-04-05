@@ -192,10 +192,10 @@ const Post = () => {
           </div>
           <div className="row justify-content-center">
           <div className="col-lg-3 col-6">
-              <a  href="https://eatsy-develop.herokuapp.com"> <img className="comida" src="tortita.png"></img></a>
+              <a  href="https://eatsy-sprint-1.herokuapp.com/"> <img className="comida" src="tortita.png"></img></a>
             </div> 
             <div id="bodyblock1" className="bodyblock col-md-5">
-            En <a className="link" href="https://eatsy-develop.herokuapp.com">este link</a> podrás probar lo último que hemos hecho. Sientete 
+            En <a className="link" href="https://eatsy-sprint-1.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
             libre para probarlo todo y si tienes alguna duda o sugerencia puedes ponerla debajo de esta misma página. </div> 
             
           </div>
