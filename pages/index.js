@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import dashify from 'dashify';
 import axios from 'axios';
 import Head from 'next/head'
@@ -29,22 +29,102 @@ const Post = () => {
     await axios.post('/api/duda', { nombre, slug: dashify(nombre), correo, duda });
     alert("¡Gracias! Es posible que te contestemos en forma de correo.")
   }
+  function Video() {
+    useEffect(() =>{
+
+      document.getElementById("bloqueanuncio").style.height = window.innerHeight;
+      document.getElementById("youtubevideo").height = 720 / (1280 / parseInt(getComputedStyle(document.getElementById("youtubevideo")).width));
+      window.onresize = () => {
+
+        document.getElementById("bloqueanuncio").style.height = window.innerHeight;
+        document.getElementById("youtubevideo").height = 720 / (1280 / parseInt(getComputedStyle(document.getElementById("youtubevideo")).width));
+      }
+    
+    });
+  }
+  function cambiaVideo() {
+    useEffect(() =>{
+      let video = document.getElementById("youtubevideo");
+      let enlace =  document.getElementById("enlaceCambiarVideo");
+      let mensajeAdicional = document.getElementById("mensajeAdicional");
+      enlace.onclick = () => {
+        if(enlace.innerText === "¿Quieres invertir?"){
+          video.src = "https://www.youtube.com/embed/FtdSXlgBMJc";
+          enlace.innerHTML = "Volver al video de usuario";
+          mensajeAdicional.style.opacity = "1";
+        } else {
+          video.src = "https://www.youtube.com/embed/A5yi0hIzaFw";
+          enlace.innerHTML = "¿Quieres invertir?";
+          mensajeAdicional.style.opacity = "0";
+        }
+      }
+    });      
+  }
   return (
     <>
     <Head>
       <title >Eatsy</title>
       <meta name="description" content="Landing page de una futura web destinada a personas con restricciones alimentarias."></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossOrigin="anonymous" />
+      <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
       <link rel="shortcut icon" href="logo.png" />
     </Head>
     
     <div className="container-fluid">
+    <div className="row justify-content-center">
+     </div>
       <div className="header row justify-content-center">
-            <img className="imgheader" src="/logoheader.png"></img>
+          <img className="imgheader" src="/logoheader.png"></img>
       </div>
     </div>
+
+    < div >
+      <div id="bloqueanuncio" >  
         
-    <div className="bloques">
+        <Fade right>
+          <div onLoad={Video()}  className="container">
+            <div className="row justify-content-center">
+              <div className="titleblock col-12">
+                Nuestra comunidad te espera
+              </div> 
+            </div>
+            <div className="row justify-content-center">
+              <div className="col-12 text-center mb-3">
+                <strong>
+                <a className="link" id="enlaceCambiarVideo" onLoad={cambiaVideo()} href="#">¿Quieres invertir?</a>
+
+                </strong>
+                <div id="mensajeAdicional">Tenemos un video para ti</div>
+              </div>
+            </div>
+            <div className="row  justify-content-center">
+              <div id="widthvideo" className="col-12">
+                <iframe id="youtubevideo" width="100%"  src="https://www.youtube.com/embed/A5yi0hIzaFw" title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              </div>
+            </div>
+            <div id="redes" className="row  justify-content-center">
+              <div id="bodyblockanuncio" className="bodyblock col-12 text-center">
+                Síguenos en las redes
+              </div>
+            </div>
+            <div className="row  justify-content-center">
+              <a href="" target="_blank" className="btn-social btn-twitter"><i className="fab fa-twitter"></i></a>
+              <a href="" target="_blank" className="btn-social btn-instagram"><i className="fab fa-instagram"></i></a>
+
+              <a href="https://www.youtube.com/channel/UCdHxzRKVBnA71caIyhaMdIg" target="_blank" className="btn-social btn-youtube"><i className="fab fa-youtube"></i></a>
+              <a href="" target="_blank" className="btn-social btn-tiktok"><i className="fab fa-tiktok"></i></a>
+              <a href="" target="_blank" className="btn-social btn-facebook"><i className="fab fa-facebook"></i></a>
+            </div>
+          </div>
+          
+        </Fade>
+      </div>
+
+      <div className="container ">
+
+
+      </div>
       <div id="bloque1" className="bloquemarron">  
       
       <Fade left>
@@ -105,8 +185,9 @@ const Post = () => {
               Los usuarios podrán filtrar productos que cumplan ciertas restricciones alimenticias (como el glúten) o sigan
               algunas dietas (como el vegetarianismo), de esos elementos se podrá saber la opinión de los usuarios sobre el mismo
               y donde encontrarlo, así como una descripción más detallada. <br></br>Además, podrán añadir ellos mismos productos que serán aprobados
-              por un administrador, añadir ubicaciones a los alimentos y añadir restricciones adicionales si las cumple.
-              <br></br>Todo esto tendrá una prueba gratuita sin tener que meter la tarjeta y tras ella su uso sólo costará 1.99€/mes
+              por un administrador, añadir ubicaciones a los alimentos y añadir estos productos a su "lista de la compra". Así mismo los productos
+              podrán tener recetas asociadas.
+              <br></br>Todo esto tendrá una prueba gratuita de un mes y tras ella su uso sólo costará 1.99€/mes. Podrás cancelar muy fácilmente.
             </div> 
           </div>
         </div>
@@ -124,22 +205,8 @@ const Post = () => {
           <div className="row justify-content-center">
           
             <div id="bodyblock1" className="bodyblock col-md-5">
-             Podemos distinguir 3 fases:<br></br>
-             <ul>
-               <li>
-                 <strong>Primera fase:</strong> tendremos todo lo importante relacionado con los productos. 05/04/2021.
-               </li>
-             </ul>
-             <ul>
-               <li>
-                 <strong>Segunda fase:</strong> la aplicación estará terminada en cuanto a funcionalidad. 27/04/2021.
-               </li>
-             </ul>
-             <ul>
-               <li>
-                 <strong>Tercera fase:</strong> se arreglarán fallos y se harán posibles mejoras como el de implementar recetas con productos relacionados. 11/05/2021.
-               </li>
-             </ul>
+              ¡La funcionalidad está prácticamente acabada!<br></br> Estamos preparándolo todo para el lanzamiento final que
+              tendrá lugar en unas 4 semanas. Para ser el primero en enterarte del lanzamiento <a className="link" href="#redes">síguenos en nuestras redes.</a> 
              </div> 
             <div className="col-lg-3 col-6">
               <img className="comida" src="familia.png"></img>
@@ -195,7 +262,7 @@ const Post = () => {
               <a  href="https://eatsy-sprint-3.herokuapp.com/"> <img className="comida" src="tortita.png"></img></a>
             </div> 
             <div id="bodyblock1" className="bodyblock col-md-5">
-            En <a className="link" href="https://eatsy-sprint-3.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
+            En <a className="link" target="_blank"  href="https://eatsy-sprint-3.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
             libre para probarlo todo y si tienes alguna duda o sugerencia puedes ponerla debajo de esta misma página. </div> 
             
           </div>
