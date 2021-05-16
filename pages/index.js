@@ -47,15 +47,18 @@ const Post = () => {
       let video = document.getElementById("youtubevideo");
       let enlace =  document.getElementById("enlaceCambiarVideo");
       let mensajeAdicional = document.getElementById("mensajeAdicional");
+      let fotoPublicitaria = document.getElementById("fotoPublicitaria")
       enlace.onclick = () => {
         if(enlace.innerText === "¿Quieres invertir?"){
-          video.src = "https://www.youtube.com/embed/FtdSXlgBMJc";
+          video.src = "https://www.youtube.com/embed/KXHYO4jQ4gY";
           enlace.innerHTML = "Volver al video de usuario";
           mensajeAdicional.style.opacity = "1";
+          fotoPublicitaria.src = "twitter_inversores.png";
         } else {
           video.src = "https://www.youtube.com/embed/A5yi0hIzaFw";
           enlace.innerHTML = "¿Quieres invertir?";
           mensajeAdicional.style.opacity = "0";
+          fotoPublicitaria.src = "twitter_usuario.png";
         }
       }
     });      
@@ -109,13 +112,10 @@ const Post = () => {
               </div>
             </div>
             <div className="row  justify-content-center">
-              <a href="" target="_blank" className="btn-social btn-twitter"><i className="fab fa-twitter"></i></a>
-              <a href="" target="_blank" className="btn-social btn-instagram"><i className="fab fa-instagram"></i></a>
-
+              <a href="https://twitter.com/eatsy2021" target="_blank" className="btn-social btn-twitter"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/eatsy_app/" target="_blank" className="btn-social btn-instagram"><i className="fab fa-instagram"></i></a>
               <a href="https://www.youtube.com/channel/UCdHxzRKVBnA71caIyhaMdIg" target="_blank" className="btn-social btn-youtube"><i className="fab fa-youtube"></i></a>
-              <a href="" target="_blank" className="btn-social btn-tiktok"><i className="fab fa-tiktok"></i></a>
-              <a href="" target="_blank" className="btn-social btn-facebook"><i className="fab fa-facebook"></i></a>
-            </div>
+             </div>
           </div>
           
         </Fade>
@@ -125,6 +125,15 @@ const Post = () => {
 
 
       </div>
+      <Flip left>
+        <div id="bloqueTwitter">
+          <div className="container ">
+            <div className="row justify-content-center mt-5">
+                <img id="fotoPublicitaria" className="col-sm-10" src="twitter_usuario.png"></img>
+            </div>
+          </div>
+        </div>
+      </Flip> 
       <div id="bloque1" className="bloquemarron">  
       
       <Fade left>
@@ -147,8 +156,9 @@ const Post = () => {
         
       </Fade>
       </div>
+
       <div id="bloque2" className="bloqueverde">
-        
+
       <Flip right>
       <div className="container">
           <div className="row justify-content-center">
@@ -259,17 +269,25 @@ const Post = () => {
           </div>
           <div className="row justify-content-center">
           <div className="col-lg-3 col-6">
-              <a  href="https://eatsy-sprint-3.herokuapp.com/"> <img className="comida" src="tortita.png"></img></a>
+              <a target="_blank" href="https://eatsy-ppl.herokuapp.com/"> <img className="comida" src="tortita.png"></img></a>
             </div> 
             <div id="bodyblock1" className="bodyblock col-md-5">
-            En <a className="link" target="_blank"  href="https://eatsy-sprint-3.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
+            En <a className="link" target="_blank"  href="https://eatsy-ppl.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
             libre para probarlo todo y si tienes alguna duda o sugerencia puedes ponerla debajo de esta misma página. </div> 
             
           </div>
         </div>    
       </Flip>
       </div>
-
+      <Flip left>
+        <div id="bloqueInsta">
+          <div className="container">
+            <div className="row justify-content-center">
+                <img className="col-lg-4 col-md-6 col-sm-8 col-xs-10" src="img_instagram.jpg"></img>
+            </div>
+          </div>
+        </div>
+      </Flip> 
 
     <div id="bloque6" className="bloquemarron">  
       <Fade bottom>
