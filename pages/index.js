@@ -42,6 +42,19 @@ const Post = () => {
     
     });
   }
+  function Video2() {
+    useEffect(() =>{
+
+      document.getElementById("bloqueanuncio2").style.height = window.innerHeight;
+      document.getElementById("youtubevideo2").height = 720 / (1280 / parseInt(getComputedStyle(document.getElementById("youtubevideo2")).width));
+      window.onresize = () => {
+
+        document.getElementById("bloqueanuncio2").style.height = window.innerHeight;
+        document.getElementById("youtubevideo2").height = 720 / (1280 / parseInt(getComputedStyle(document.getElementById("youtubevideo2")).width));
+      }
+    
+    });
+  }
   function cambiaVideo() {
     useEffect(() =>{
       let video = document.getElementById("youtubevideo");
@@ -128,7 +141,7 @@ const Post = () => {
       <Flip left>
         <div id="bloqueTwitter">
           <div className="container ">
-            <div className="row justify-content-center mt-5">
+            <div className="row justify-content-center mt-sm-5">
                 <img id="fotoPublicitaria" className="col-sm-10" src="twitter_usuario.png"></img>
             </div>
           </div>
@@ -258,7 +271,7 @@ const Post = () => {
         </Flip>
       </div>
       
-      <div id="bloque2" className="bloqueverde">
+      <div id="bloqueanuncio2" onLoad={Video2()} className="bloqueverde">
         
       <Flip right>
       <div className="container">
@@ -266,6 +279,9 @@ const Post = () => {
             <div className="titleblock col-12">
               ¿Quieres probar una demo?
             </div> 
+          </div>
+          <div className="row justify-content-center">
+          <iframe id="youtubevideo2" src="https://www.youtube.com/embed/XVPO1qLUl-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div className="row justify-content-center">
           <div className="col-lg-3 col-6">
