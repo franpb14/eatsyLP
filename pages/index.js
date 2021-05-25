@@ -63,7 +63,7 @@ const Post = () => {
       let fotoPublicitaria = document.getElementById("fotoPublicitaria")
       enlace.onclick = () => {
         if(enlace.innerText === "¿Quieres invertir?"){
-          video.src = "https://www.youtube.com/embed/KXHYO4jQ4gY";
+          video.src = "https://www.youtube.com/embed/g8QNxsKOfBA";
           enlace.innerHTML = "Volver al video de usuario";
           mensajeAdicional.style.opacity = "1";
           fotoPublicitaria.src = "twitter_inversores.png";
