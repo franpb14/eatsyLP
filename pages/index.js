@@ -5,6 +5,8 @@ import Head from 'next/head'
 import 'bootstrap/dist/css/bootstrap.css'
 import Fade from 'react-reveal/Fade';
 import Flip from 'react-reveal/Flip';
+import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
+ 
 
 const Post = () => {
   const [content, setContent] = useState({
@@ -26,8 +28,15 @@ const Post = () => {
   }
   const onSubmit2 = async () => {
     const { nombre, correo, duda } = content;
-    await axios.post('/api/duda', { nombre, slug: dashify(nombre), correo, duda });
-    alert("¡Gracias! Es posible que te contestemos en forma de correo.")
+    if( nombre && nombre.trim()!="" || correo && correo.trim() != "" || duda && duda.trim() != ""){
+
+      await axios.post('/api/duda', { nombre, slug: dashify(nombre), correo, duda });
+      alert("¡Gracias! Es posible que te contestemos en forma de correo.")
+    } else {
+
+      alert("Rellena los campos");
+      return false;
+    }
   }
   function Video() {
     useEffect(() =>{
@@ -55,6 +64,24 @@ const Post = () => {
     
     });
   }
+  const [modalOpen, setModalOpen] = useState(false);
+  function preguntaPlan(){
+    useEffect(() => {
+      let botonesSubmit = document.querySelectorAll(".button-submit");
+      let planes = [1, 3, 6]
+      let it = 0;
+      botonesSubmit.forEach(el => {
+        let porcentaje = planes[it];
+        el.onclick=()=>{
+          $('#exampleModalLong').modal('hide');
+          document.getElementById("DudaTextArea").value= "Me gustaría saber más acerca del plan para obtener un " + porcentaje + '%'
+          window.scroll(0,100000);
+          
+        }
+        it++;
+      });
+    })
+  }
   function cambiaVideo() {
     useEffect(() =>{
       let video = document.getElementById("youtubevideo");
@@ -63,14 +90,18 @@ const Post = () => {
       let fotoPublicitaria = document.getElementById("fotoPublicitaria")
       enlace.onclick = () => {
         if(enlace.innerText === "¿Quieres invertir?"){
-          video.src = "https://www.youtube.com/embed/g8QNxsKOfBA";
+          video.src = "https://www.youtube.com/embed/0EavQQiD_VA";
           enlace.innerHTML = "Volver al video de usuario";
           mensajeAdicional.style.opacity = "1";
+          mensajeAdicional.style.cursor = "pointer";
+          mensajeAdicional.onclick = () => setModalOpen(!modalOpen)
           fotoPublicitaria.src = "twitter_inversores.png";
         } else {
           video.src = "https://www.youtube.com/embed/A5yi0hIzaFw";
           enlace.innerHTML = "¿Quieres invertir?";
           mensajeAdicional.style.opacity = "0";
+          mensajeAdicional.style.cursor = "default";
+          mensajeAdicional.onclick = () => console.log();
           fotoPublicitaria.src = "twitter_usuario.png";
         }
       }
@@ -81,11 +112,16 @@ const Post = () => {
     <Head>
       <title >Eatsy</title>
       <meta name="description" content="Landing page de una futura web destinada a personas con restricciones alimentarias."></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossOrigin="anonymous" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossOrigin="anonymous" />
       <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Abril+Fatface" />
       <link rel="shortcut icon" href="logo.png" />
     </Head>
-    
     <div className="container-fluid">
     <div className="row justify-content-center">
      </div>
@@ -96,7 +132,38 @@ const Post = () => {
 
     < div >
       <div id="bloqueanuncio" >  
-        
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <PricingTable  highlightColor='#a1c448'>
+            <PricingSlot onLoad={preguntaPlan()}  highlighted buttonText='PREGUNTAR' title='Obtén un 1%' priceText='612.10€'>
+                <PricingDetail> <b>6</b> paquetes disponibles</PricingDetail>
+                <PricingDetail> <b>100</b> acciones</PricingDetail>
+            </PricingSlot>
+            <PricingSlot highlightColor='#a1c448' highlighted buttonText='PREGUNTAR' title='Obtén un 3%' priceText='1836.30€'>
+                <PricingDetail> <b>6</b> paquetes disponibles</PricingDetail>
+                <PricingDetail> <b>300</b> acciones</PricingDetail>
+            </PricingSlot>
+            <PricingSlot highlightColor='#a1c448' highlighted buttonText='PREGUNTAR' title='Obtén un 6%' priceText='3672.60€'>
+                <PricingDetail> <b>4</b> paquetes disponibles</PricingDetail>
+                <PricingDetail> <b>600</b> acciones</PricingDetail>
+            </PricingSlot>
+        </PricingTable>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
         <Fade right>
           <div onLoad={Video()}  className="container">
             <div className="row justify-content-center">
@@ -110,7 +177,7 @@ const Post = () => {
                 <a className="link" id="enlaceCambiarVideo" onLoad={cambiaVideo()} href="#">¿Quieres invertir?</a>
 
                 </strong>
-                <div id="mensajeAdicional">Tenemos un video para ti</div>
+                <div id="mensajeAdicional" data-toggle="modal" data-target="#exampleModalLong">Pincha aquí para ver planes de inversión</div>
               </div>
             </div>
             <div className="row  justify-content-center">
@@ -277,18 +344,18 @@ const Post = () => {
       <div className="container">
           <div className="row justify-content-center">
             <div className="titleblock col-12">
-              ¿Quieres probar una demo?
+              ¿Quieres ver una demo?
             </div> 
           </div>
           <div className="row justify-content-center">
-          <iframe id="youtubevideo2" src="https://www.youtube.com/embed/XVPO1qLUl-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe id="youtubevideo2" src="https://www.youtube.com/embed/i66GLUBe0y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center mt-3">
           <div className="col-lg-3 col-6">
-              <a target="_blank" href="https://eatsy-ppl.herokuapp.com/"> <img className="comida" src="tortita.png"></img></a>
+              <a target="_blank" href="https://eatsy-official.herokuapp.com/"> <img className="comida" src="tortita.png"></img></a>
             </div> 
             <div id="bodyblock1" className="bodyblock col-md-5">
-            En <a className="link" target="_blank"  href="https://eatsy-ppl.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
+            En <a className="link" target="_blank"  href="https://eatsy-official.herokuapp.com/">este link</a> podrás probar lo último que hemos hecho. Sientete 
             libre para probarlo todo y si tienes alguna duda o sugerencia puedes ponerla debajo de esta misma página. </div> 
             
           </div>
@@ -485,12 +552,14 @@ const Post = () => {
                   type="text"
                   className="form-control"
                   name="nombre"
+                  required
                   value={content.nombre}
                   onChange={onChange2}
                 />
                 Correo:
                 <input
                   type="email"
+                  required
                   aria-describedby="emailHelp"
                   className="form-control"
                   name="correo"
@@ -501,13 +570,15 @@ const Post = () => {
                 <textarea
                   className="form-control"
                   name="duda"
+                  required
+                  id="DudaTextArea"
                   value={content.duda}
                   onChange={onChange2}
                 />
               </div>
           </div>
           <div className="row justify-content-center">
-            <button className="btn btn-primary" onClick={onSubmit2} >Enviar</button>
+            <button id="submitDudas" className="btn btn-primary" onClick={onSubmit2} >Enviar</button>
           </div>
           
         </div>  

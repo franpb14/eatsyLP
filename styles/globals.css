@@ -59,12 +59,19 @@ body {
   text-align: center;
   color: #7f6000;
 }
+.highlighted-header{
+  background-color: #a1c448 !important;
+}
 #mensajeAdicional{
   opacity: 0;
-
+  cursor: default;
   color: #7f6000;
+  text-decoration: none;
   font-family: "Abril Fatface", Verdana,  Brush Script MT, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   transition: 1s ease;
+}
+#mensajeAdicional:hover{
+  text-decoration: underline;
 }
 #enlaceCambiarVideo {
   font-size: 20px;
