@@ -90,7 +90,7 @@ const Post = () => {
       let fotoPublicitaria = document.getElementById("fotoPublicitaria")
       enlace.onclick = () => {
         if(enlace.innerText === "¿Quieres invertir?"){
-          video.src = "https://www.youtube.com/embed/0EavQQiD_VA";
+          video.src = "https://www.youtube.com/embed/pNYbJrU26vg";
           enlace.innerHTML = "Volver al video de usuario";
           mensajeAdicional.style.opacity = "1";
           mensajeAdicional.style.cursor = "pointer";
@@ -208,6 +208,9 @@ const Post = () => {
       <Flip left>
         <div id="bloqueTwitter">
           <div className="container ">
+            <div className="row justify-content-center mt-sm-4">
+              <a target="_blank"  href="https://eatsy-official.herokuapp.com/" className="col-5 btn-grad">Accede a nuestra web</a>
+            </div>
             <div className="row justify-content-center mt-sm-5">
                 <img id="fotoPublicitaria" className="col-sm-10" src="twitter_usuario.png"></img>
             </div>
